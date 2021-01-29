@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="8dp"
+    >
+
+
+    <TextView
+
+        android:id="@+id/export_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/note_your_import_id"
+        style="@style/LargeBlackText"
+        />
+
+    <TextView
+        android:id="@+id/export_import_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        style="@style/ExportTextViewStyle"
+        android:padding="10dp"
+        android:text="gko"
+        />
+
+    <Button
+        android:id="@+id/export_export_btn"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        style="@style/ImportExportButton"
+        android:text="@string/export" />
+</LinearLayout
+>

@@ -4,7 +4,7 @@
     <string name="search">Search</string>
     <string name="cloud">Cloud</string>
     <string name="exit">Exit</string>
-    <string name="add_location_button">Add Location button</string>
+    <string name="add_location_button_description">Add Location button</string>
     <string name="add_location">Add Location</string>
     <string name="sections">Sections</string>
     <string name="add_section">Add Section</string>
@@ -44,5 +44,11 @@
     <string name="delete_confirmation_message">Would you really like to delete this item?</string>
     <string name="delete_item_title">Delete an Item</string>
     <string name="share_title_message">Share with friends</string>
+    <string name="add_section_button_description">Add Section Button</string>
+    <string name="item_s_name">Item\'s name</string>
+    <string name="note_your_import_id">Note your import ID!</string>
+    <string name="export">Export</string>
+    <string name="import_text">Import</string>
+    <string name="enter_your_import_id">Enter your import ID</string>
 </resources>
 

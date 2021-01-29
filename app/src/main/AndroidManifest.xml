@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ForgetHelper">
+        <activity android:name=".ui.SearchActivity"></activity>
+        <activity android:name=".ui.DetailItemActivity" />
+        <activity android:name=".ui.ItemActivity" />
+        <activity android:name=".ui.SectionActivity" />
+        <activity android:name=".ui.LocationActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
