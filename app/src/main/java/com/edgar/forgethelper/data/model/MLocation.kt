@@ -5,7 +5,7 @@ import androidx.room.Entity
 
 // MLocation.kt
 
-@Entity(tableName = "location")
+@Entity(tableName = "tb_location")
 data class MLocation(
     // location name
     @ColumnInfo(name = "name")
