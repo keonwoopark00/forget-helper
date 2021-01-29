@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <View
+        android:layout_width="70dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/darker_gray"
+        />
+
+
+    <TextView
+        android:id="@+id/bs_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TitleText"
+        android:text="title" />
+
+    <TextView
+        android:id="@+id/bs_item_guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SmallBlackText"
+        android:text="@string/name"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:id="@+id/bs_item_et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/bs_item_guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SmallBlackText"
+        android:text="@string/description"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:id="@+id/bs_item_et_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <Button
+        android:id="@+id/bs_item_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MainButton"
+        android:text="Button"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        />
+</LinearLayout>

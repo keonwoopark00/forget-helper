@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="8dp"
+    >
+
+
+    <TextView
+
+        android:id="@+id/import_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/enter_your_import_id"
+        style="@style/LargeBlackText"
+        />
+
+    <EditText
+        android:id="@+id/import_et_import_id"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/EditTextStyle"
+        android:ems="15"
+        android:inputType="textPersonName"
+        />
+
+    <Button
+        android:id="@+id/import_import_btn"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        style="@style/ImportExportButton"
+        android:text="@string/import_text" />
+</LinearLayout
+>
