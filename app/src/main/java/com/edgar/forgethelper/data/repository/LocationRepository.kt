@@ -1,9 +1,8 @@
 package com.edgar.forgethelper.data.repository
 
+import androidx.lifecycle.LiveData
 import com.edgar.forgethelper.data.dao.LocationDao
-import com.edgar.forgethelper.data.model.LocationWithSections
 import com.edgar.forgethelper.data.model.MLocation
-import kotlinx.coroutines.flow.Flow
 
 
 // LocationRepository.kt
@@ -26,9 +25,7 @@ class LocationRepository(
     private val locationDao: LocationDao
         get() = dataRepository.database.locationDao()
 
-    suspend fun getAllLocations(): Flow<List<MLocation>> {
-        return locationDao.selectAllLocations()
-    }
+    val locations: LiveData<List<MLocation>> = locationDao.locationsLiveData
 
     suspend fun insertLocation(location: MLocation) {
         locationDao.insert(location)
@@ -38,7 +35,4 @@ class LocationRepository(
         locationDao.delete(location)
     }
 
-    suspend fun getLocationWithSections(): List<LocationWithSections> {
-        return locationDao.selectLocationWithSections()
-    }
 }

@@ -3,6 +3,8 @@ package com.edgar.forgethelper.data.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
+import androidx.room.PrimaryKey
+import java.util.*
 
 // MSection.kt
 
@@ -15,10 +17,15 @@ import androidx.room.ForeignKey
     )]
 )
 data class MSection(
-    // section name
+    @PrimaryKey(autoGenerate = true)
+    var id: Long? = null,
+
+    @ColumnInfo(name = "createdDate")
+    var createdDate: String = Date().toString(),
+
     @ColumnInfo(name = "name")
     var name: String = "",
 
     @ColumnInfo(name = "location_id")
     var location_id: Long = -1
-) : BaseEntity()
+)

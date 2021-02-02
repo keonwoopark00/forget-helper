@@ -50,5 +50,9 @@
     <string name="export">Export</string>
     <string name="import_text">Import</string>
     <string name="enter_your_import_id">Enter your import ID</string>
+    <string name="delete_location_dialog_title">Delete a Location</string>
+    <string name="delete_location_dialog_message">Would you really like to delete this location?</string>
+    <string name="delete_section_dialog_title">Delete a Section</string>
+    <string name="delete_section_dialog_message">Would you really like to delete this section?</string>
 </resources>
 

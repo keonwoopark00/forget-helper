@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun openLocationActivity() {
         val i = Intent(this, LocationActivity::class.java)
+        startActivity(i)
     }
 
     private fun openSearchActivity() {

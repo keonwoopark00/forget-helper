@@ -10,10 +10,11 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 class BottomSheetItem(
     var title: String = "title",
     var btnText: String = "button",
-    var onButtonClick: (String, String) -> Unit
 ) : BottomSheetDialogFragment() {
     private var _binding: BottomSheetItemBinding? = null
     private val binding get() = _binding!!
+
+    lateinit var onButtonClick: (String, String) -> Unit
 
     override fun onCreateView(
         inflater: LayoutInflater,

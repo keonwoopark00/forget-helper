@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/section_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.SectionActivity">
@@ -12,12 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        app:title="gwk"
         android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
         android:theme="@style/Theme.AppCompat.Light"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:title="gwk" />
 
     <ImageButton
         android:id="@+id/section_add_btn"
@@ -37,12 +37,11 @@
         style="@style/LargeBlackText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_section"
-        app:layout_constraintLeft_toRightOf="@id/section_add_btn"
-        app:layout_constraintTop_toTopOf="@id/section_add_btn"
-        app:layout_constraintBottom_toBottomOf="@id/section_add_btn"
         android:layout_marginLeft="20dp"
-        />
+        android:text="@string/add_section"
+        app:layout_constraintBottom_toBottomOf="@id/section_add_btn"
+        app:layout_constraintLeft_toRightOf="@id/section_add_btn"
+        app:layout_constraintTop_toTopOf="@id/section_add_btn" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/section_rv"
@@ -50,9 +49,9 @@
         android:layout_height="0dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/section_add_btn"/>
+        app:layout_constraintTop_toBottomOf="@id/section_add_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

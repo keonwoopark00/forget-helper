@@ -11,10 +11,11 @@ class BottomSheet(
     var title: String = "title",
     var guide: String = "guide",
     var btnText: String = "button",
-    var onButtonClick: (String) -> Unit
 ) : BottomSheetDialogFragment() {
     private var _binding: BottomSheetBinding? = null
     private val binding get() = _binding!!
+
+    lateinit var onButtonClick: (String) -> Unit
 
     override fun onCreateView(
         inflater: LayoutInflater,

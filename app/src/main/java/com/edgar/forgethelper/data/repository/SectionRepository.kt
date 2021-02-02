@@ -1,9 +1,8 @@
 package com.edgar.forgethelper.data.repository
 
+import androidx.lifecycle.LiveData
 import com.edgar.forgethelper.data.dao.SectionDao
 import com.edgar.forgethelper.data.model.MSection
-import com.edgar.forgethelper.data.model.SectionWithItems
-import kotlinx.coroutines.flow.Flow
 
 
 // SectionRepository.kt
@@ -26,7 +25,7 @@ class SectionRepository(
     private val sectionDao: SectionDao
         get() = dataRepository.database.sectionDao()
 
-    suspend fun getSectionsByLocationId(locationId: Long): Flow<List<MSection>> {
+    fun getSectionsByLocationId(locationId: Long): LiveData<List<MSection>> {
         return sectionDao.selectSectionsByLocationId(locationId)
     }
 
@@ -36,9 +35,5 @@ class SectionRepository(
 
     suspend fun deleteSection(section: MSection) {
         sectionDao.delete(section)
-    }
-
-    suspend fun getSectionWithItems(): List<SectionWithItems> {
-        return sectionDao.selectSectionWithItems()
     }
 }

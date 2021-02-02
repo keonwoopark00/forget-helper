@@ -1,8 +1,8 @@
 package com.edgar.forgethelper.data.repository
 
+import androidx.lifecycle.LiveData
 import com.edgar.forgethelper.data.dao.ItemDao
 import com.edgar.forgethelper.data.model.MItem
-import kotlinx.coroutines.flow.Flow
 
 
 // ItemRepository.kt
@@ -25,7 +25,7 @@ class ItemRepository(
     private val itemDao: ItemDao
         get() = dataRepository.database.itemDao()
 
-    suspend fun getItemsBySectionId(sectionId: Long): Flow<List<MItem>> {
+    fun getItemsBySectionId(sectionId: Long): LiveData<List<MItem>> {
         return itemDao.selectItemsBySectionId(sectionId)
     }
 
@@ -39,5 +39,9 @@ class ItemRepository(
 
     suspend fun getItemsByName(name: String): List<MItem> {
         return itemDao.selectItemsByName(name)
+    }
+
+    fun getItemById(itemId: Long): LiveData<MItem?> {
+        return itemDao.selectItemById(itemId)
     }
 }

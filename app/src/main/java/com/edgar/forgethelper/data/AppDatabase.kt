@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 // AppDatabase.kt
 
 @Database(
-    version = 1, exportSchema = false,
+    version = 4, exportSchema = false,
     entities = [
         MLocation::class,
         MSection::class,
