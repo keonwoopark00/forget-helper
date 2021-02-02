@@ -37,7 +37,7 @@ class ItemRepository(
         itemDao.delete(item)
     }
 
-    suspend fun getItemsByName(name: String): List<MItem> {
+    fun getItemsByName(name: String): LiveData<List<MItem>> {
         return itemDao.selectItemsByName(name)
     }
 

@@ -19,6 +19,6 @@ interface ItemDao : BaseDao<MItem> {
     fun selectItemById(itemId: Long): LiveData<MItem?>
 
    // SELECT items according to name
-    @Query("SELECT * FROM tb_item WHERE name LIKE '%' + :n + '%'")
-    suspend fun selectItemsByName(n: String): List<MItem>
+    @Query("SELECT * FROM tb_item WHERE name LIKE '%' || :n || '%'")
+    fun selectItemsByName(n: String): LiveData<List<MItem>>
 }

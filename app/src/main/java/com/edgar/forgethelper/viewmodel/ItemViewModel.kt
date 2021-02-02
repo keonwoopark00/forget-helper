@@ -1,6 +1,7 @@
 package com.edgar.forgethelper.viewmodel
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.*
 import com.edgar.forgethelper.data.model.MItem
 import com.edgar.forgethelper.data.repository.DataHandleError
@@ -50,12 +51,8 @@ class ItemViewModel(application: Application) :
         itemRepo.deleteItem(item)
     }
 
-    fun getSearchResult(searchString: String): List<MItem> {
-        var result = listOf<MItem>()
-        viewModelScope.launch {
-            result = itemRepo.getItemsByName(searchString)
-        }
-        return result
+    fun getSearchResult(searchString: String): LiveData<List<MItem>> {
+        return itemRepo.getItemsByName(searchString)
     }
 
     fun getItemDetail(itemId: Long): LiveData<MItem?> {

@@ -50,7 +50,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun openSearchActivity() {
-        TODO("Not yet implemented")
+        val i = Intent(this, SearchActivity::class.java)
+        startActivity(i)
     }
 
     private fun displayCloudMenu() {

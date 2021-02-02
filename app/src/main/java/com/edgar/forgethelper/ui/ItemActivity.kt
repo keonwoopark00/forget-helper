@@ -117,7 +117,6 @@ class ItemActivity : AppCompatActivity() {
     private fun openDetailItemActivity(item: MItem) {
         val i = Intent(this@ItemActivity, DetailItemActivity::class.java)
         i.putExtra("item_id", item.id)
-        i.putExtra("selected_item", item)
         startActivity(i)
     }
 
