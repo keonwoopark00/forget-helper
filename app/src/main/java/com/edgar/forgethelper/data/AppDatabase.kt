@@ -6,6 +6,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.edgar.forgethelper.data.dao.FirestoreDao
 import com.edgar.forgethelper.data.dao.ItemDao
 import com.edgar.forgethelper.data.dao.LocationDao
 import com.edgar.forgethelper.data.dao.SectionDao
@@ -31,6 +32,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun locationDao(): LocationDao
     abstract fun sectionDao(): SectionDao
     abstract fun itemDao(): ItemDao
+    abstract fun firestoreDao(): FirestoreDao
 
     companion object {
         private const val DATABASE_NAME = "forget-helper.db"

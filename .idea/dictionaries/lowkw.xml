@@ -2,7 +2,9 @@
   <dictionary name="lowkw">
     <words>
       <w>daos</w>
+      <w>firestore</w>
       <w>forgethelper</w>
+      <w>locs</w>
       <w>snackbar</w>
     </words>
   </dictionary>
